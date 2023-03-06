@@ -1,0 +1,30 @@
+.nav {
+    flex: 0 0 10%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.item {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.item a {
+    display: block;
+    padding: 0 0 0px 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.item a.activelink {
+    color: gold;
+}
+
+.item__icon {
+display: block;
+ width: 18px;
+ height: 18px;
+
+}

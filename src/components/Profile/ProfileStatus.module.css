@@ -1,0 +1,10 @@
+.status__edite {
+    cursor: pointer;
+}
+
+
+.status__input { 
+    padding: 0;
+    border: none;
+    outline: none;
+}

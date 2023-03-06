@@ -1,0 +1,10 @@
+.image {
+  width: 40px;
+  height: 40px;
+}
+
+
+.messages__container { 
+    height: 400px;
+    overflow: auto;
+}

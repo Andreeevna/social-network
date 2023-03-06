@@ -1,0 +1,40 @@
+.header {
+  padding: 10px 0 10px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo__text {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.login__container {
+  display: flex;
+}
+
+
+.login__name { 
+  margin-right: 5px;
+  display:inline-block;
+  font-weight:700;
+}
