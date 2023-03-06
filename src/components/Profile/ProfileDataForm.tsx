@@ -1,26 +1,66 @@
-import React from "react";
-import { reduxForm, Field, InjectedFormProps } from "redux-form";
-import { Input, Textarea } from "../../common/Preloader/FormsControl";
-import s from "./../../common/Preloader/FormsControl.module.css";
-import style from "./ProfileDataForm.module.css";
-import cn from "classnames";
-import { ProfileType } from "./../../types/types";
+import React from 'react';
+import { reduxForm, Field, InjectedFormProps } from 'redux-form';
+import { Input, Textarea } from '../../common/Preloader/FormsControl';
+import s from './../../common/Preloader/FormsControl.module.css';
+import style from './ProfileDataForm.module.css';
+import cn from 'classnames';
+import { ProfileType } from './../../types/types';
 
 type PropsType = {
   profile: ProfileType;
 };
 
-const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> &
-  PropsType> = ({ handleSubmit, profile, error }) => {
+const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> & PropsType> = ({
+  handleSubmit,
+  profile,
+  error,
+}) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={style.form} onSubmit={handleSubmit}>
       {error && <div className={s.formSumError}>{error}</div>}
-      <div className={style.from__item}>
+      <div className={style.form_person__title}>Personal information</div>
+      <div className={style.form_person__info}>
+        <div className={style.title_list}>
+          <span className={style.title_list__item}>Full name:</span>
+          <span className={style.title_list__item}>Looking for a job:</span>
+          <span className={style.title_list__item}>My professional skills:</span>
+          <span className={style.title_list__item}>About me:</span>
+        </div>
+        <div className={style.desc_list}>
+          <Field
+            className={cn(style.desc_list__field, style.field_input)}
+            placeholder={'Full name'}
+            name={'fullName'}
+            component={Input}
+          />
+          <Field
+            className={style.desc_list__field}
+            placeholder={''}
+            name={'lookingForAJob'}
+            component={Input}
+            type={'checkbox'}
+          />
+          <Field
+            className={cn(style.desc_list__field, style.desc_list_textarea)}
+            placeholder={'My professional skills'}
+            name={'lookingForAJobDescription'}
+            component={Textarea}
+          />
+          <Field
+            className={cn(style.desc_list__field, style.desc_list_textarea)}
+            placeholder={'About me'}
+            name={'aboutMe'}
+            component={Textarea}
+          />
+        </div>
+      </div>
+
+      {/* <div className={style.from__item}>
         <span className={style.from__title}>Full name:</span>
         <Field
           className={cn(style.from__field, style.field_input)}
-          placeholder={"Full name"}
-          name={"fullName"}
+          placeholder={'Full name'}
+          name={'fullName'}
           component={Input}
         />
       </div>
@@ -28,18 +68,18 @@ const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> &
         <span className={style.from__title}>Looking for a job:</span>
         <Field
           className={style.from__field}
-          placeholder={""}
-          name={"lookingForAJob"}
+          placeholder={''}
+          name={'lookingForAJob'}
           component={Input}
-          type={"checkbox"}
+          type={'checkbox'}
         />
       </div>
       <div className={style.from__item}>
         <span className={style.from__title}>My professional skills:</span>
         <Field
           className={cn(style.from__field, style.field_textarea)}
-          placeholder={"My professional skills"}
-          name={"lookingForAJobDescription"}
+          placeholder={'My professional skills'}
+          name={'lookingForAJobDescription'}
           component={Textarea}
         />
       </div>
@@ -47,14 +87,13 @@ const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> &
         <span className={style.from__title}>About me:</span>
         <Field
           className={cn(style.from__field, style.field_textarea)}
-          placeholder={"About me"}
-          name={"aboutMe"}
+          placeholder={'About me'}
+          name={'aboutMe'}
           component={Textarea}
         />
-      </div>
-      {/* <div> */}
+      </div> */}
       <div className={style.from__item}>
-        <span className={style.from__title}>my contacts:</span>
+        <span className={style.from__title}>My contacts:</span>
       </div>
       {Object.keys(profile.contacts).map((key) => {
         return (
@@ -63,13 +102,12 @@ const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> &
             <Field
               className={cn(style.from__field, style.field_input)}
               placeholder={key}
-              name={"contacts." + key}
+              name={'contacts.' + key}
               component={Input}
             />
           </div>
         );
       })}
-      {/* </div> */}
       <div className={style.button_container}>
         <button className="button_standart">Save</button>
       </div>
@@ -78,7 +116,7 @@ const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, PropsType> &
 };
 
 const ProfileDataReduxForm = reduxForm<ProfileType, PropsType>({
-  form: "edit-profile",
+  form: 'edit-profile',
 })(ProfileDataForm);
 
 export default ProfileDataReduxForm;

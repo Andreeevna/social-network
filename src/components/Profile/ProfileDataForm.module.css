@@ -1,41 +1,48 @@
-.from__item {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.from__item:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.from__title {
-    margin-right: 10px;
-    display: inline-block;
-    text-transform: lowercase;
-}
-
-
-
-.from__field {
-    padding-left: 5px;
-    border: 1px solid #ecebeb;
-    border-radius:4px;
-    outline: none;
-}
-
-.field_input { 
-    width: 400px;
-}
-
-.field_textarea { 
-    width: 500px;
-    resize: vertical;
-}
-
 .from__field::placeholder {
-    color: #ecebeb;
+  color: #ecebeb;
 }
 
 .button_container {
-    text-align: right;
+  text-align: right;
+}
+
+.form_person__title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.form_person__info {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 18%;
+}
+
+.title_list__item {
+  width: 100%;
+  color: #95a5b8;
+}
+
+.desc_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 60%;
+}
+
+.desc_list__field {
+  display: inline-block;
+  width: 100%;
+  padding: 3px;
+}
+
+.desc_list div {
+  background-color: red;
 }
