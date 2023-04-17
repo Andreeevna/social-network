@@ -1,0 +1,11 @@
+.status__edite {
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.status__input { 
+    padding: 0;
+    border: none;
+    outline: none;
+}

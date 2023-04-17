@@ -1,0 +1,52 @@
+.news__container {
+    width: 100%;
+}
+
+.news__content {
+    margin-bottom: 20px;
+    padding: 20px 30px 20px 30px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.news__title {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+
+.news__text {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news__input {
+    width: 100%;
+    max-width: 650px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    border: none;
+    border-radius: 4px;
+    scrollbar: auto;
+    border: 2px solid #F4F4F4;
+    color: #181818;
+}
+
+.news__input::placeholder {
+    color: #cccccc;
+}
+
+
+.news__added {
+    margin-bottom: 50px;
+    padding: 20px 30px 20px 30px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.news__container_button {}

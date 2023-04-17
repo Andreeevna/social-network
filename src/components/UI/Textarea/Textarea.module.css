@@ -1,0 +1,16 @@
+.textarea {
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    border: none;
+    border-radius: 4px;
+    scrollbar: auto;
+    border: 2px solid #F4F4F4;
+    display: flex;
+    color: #181818;
+}
+
+.textarea::placeholder {
+    color: #cccccc;
+}

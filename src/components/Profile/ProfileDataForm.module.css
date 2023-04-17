@@ -1,0 +1,91 @@
+.from__field::placeholder {
+  color: #ecebeb;
+}
+
+.button_container {
+  text-align: right;
+}
+
+.form_person__title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.form_person__info {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.title_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: 8px;
+  margin-right: 20px;
+}
+
+.title_list__item {
+  width: 100%;
+  color: #95a5b8;
+}
+
+.desc_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 60%;
+}
+
+.desc_list__field {
+  display: inline-block;
+  width: 100%;
+  padding: 3px;
+}
+
+.desc_list__radio {
+  width: auto;
+}
+
+.desc_list div {
+  background-color: red;
+}
+
+.from__item {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.from__item:last-child {
+  margin-bottom: 0;
+}
+
+.profile_from__title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.from__title {
+  display: inline-block;
+  margin-right: 20px;
+  color: #95a5b8;
+}
+
+.from__title::first-letter {
+  text-transform: uppercase;
+}
+
+.field_input {
+  outline: none;
+  border: 2px solid #F4F4F4;
+  border-radius: 4px;
+  color: #181818;
+  font-size: 16px;
+  transition: 300ms;
+}
+
+.field_input:hover {
+  border-color: #0077b5;
+  color: #0077b5;
+}

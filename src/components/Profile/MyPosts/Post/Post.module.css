@@ -1,0 +1,53 @@
+.item {
+  padding: 15px 30px 15px 30px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.item__content {
+  margin-bottom: 15px;
+}
+
+.item__reaction {
+  display: flex;
+  align-items: center;
+}
+
+.reaction__container {
+  display: flex;
+  align-items: center;
+}
+
+.reaction__container:not(:last-child) {
+  margin-right: 15px;
+}
+
+.reaction__container > *:not(:last-child) {
+  margin-right: 5px;
+}
+
+.reaction__icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon__like {
+    background-image: url("./../../../../assets/img/icons/thumbs-up.svg");
+}
+
+
+.icon__massage {
+    background-image: url("./../../../../assets/img/icons/message-circle.svg");
+}
+
+
+.like__count {
+  display: inline-block;
+}
